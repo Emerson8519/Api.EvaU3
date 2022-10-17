@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+   version="4.0">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <data-source>
+        <description>DataSource invitados</description>
+        <name>java:app/invitadosDS</name>
+        <class-name>org.postgresql.ds.PGSimpleDataSource</class-name>
+        <server-name>ec2-54-91-223-99.compute-1.amazonaws.com</server-name>
+        <port-number>5432</port-number>
+        <database-name>d17689ftvjdam1</database-name>
+        <user>leycpgmqzogvby</user>
+        <password>ee8e5f271adaaff0bbb24f6c1b09f1bfe57f484a22b4eae8cff03288ddf22f4f</password>
+    </data-source>
+    
+</web-app>
