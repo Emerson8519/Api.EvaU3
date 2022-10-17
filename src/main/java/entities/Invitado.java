@@ -31,7 +31,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Invitado.findByInvNombre", query = "SELECT i FROM Invitado i WHERE i.invNombre = :invNombre"),
     @NamedQuery(name = "Invitado.findByInvApellido1", query = "SELECT i FROM Invitado i WHERE i.invApellido1 = :invApellido1"),
     @NamedQuery(name = "Invitado.findByInvApellido2", query = "SELECT i FROM Invitado i WHERE i.invApellido2 = :invApellido2"),
-    @NamedQuery(name = "Invitado.findByInvfechaNacimiento", query = "SELECT i FROM Invitado i WHERE i.invfechaNacimiento = :invfechaNacimiento")})
+    })
 public class Invitado implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,10 +50,7 @@ public class Invitado implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "inv_apellido2")
     private String invApellido2;
-    @Column(name = "inv_fechaNacimiento")
-    @Temporal(TemporalType.DATE)
-    private Date invfechaNacimiento;
-
+    
     public Invitado() {
     }
 
@@ -93,13 +90,8 @@ public class Invitado implements Serializable {
         this.invApellido2 = invApellido2;
     }
 
-    public Date getInvfechaNacimiento() {
-        return invfechaNacimiento;
-    }
+    
 
-    public void setInvfechaNacimiento(Date invfechaNacimiento) {
-        this.invfechaNacimiento = invfechaNacimiento;
-    }
 
     @Override
     public int hashCode() {
